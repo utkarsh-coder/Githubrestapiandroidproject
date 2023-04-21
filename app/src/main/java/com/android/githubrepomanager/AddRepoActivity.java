@@ -55,7 +55,7 @@ public class AddRepoActivity extends AppCompatActivity {
                 progressBar.setVisibility(View.VISIBLE);
                 addBtn.setEnabled(false);
                 if (!ownerEditText.getText().toString().equals("")&& !repoEditText.getText().toString().equals("")){
-                    gitRepoInterface.getRepo(getString(R.string.bearer_token), ownerEditText.getText().toString(),repoEditText.getText().toString()).enqueue(new Callback<JsonElement>() {
+                    gitRepoInterface.getRepo(ownerEditText.getText().toString(),repoEditText.getText().toString()).enqueue(new Callback<JsonElement>() {
                         @Override
                         public void onResponse(Call<JsonElement> call, Response<JsonElement> response) {
                             progressBar.setVisibility(View.GONE);
