@@ -67,7 +67,7 @@ public class AddRepoActivity extends AppCompatActivity {
                                 finish();
                             }
                             else {
-                                Toast.makeText(AddRepoActivity.this, "Owner or Repo not found! Enter correct details", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(AddRepoActivity.this, "Owner/Repo not found or the Repo is private !", Toast.LENGTH_SHORT).show();
                             }
                         }
 
