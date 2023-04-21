@@ -13,6 +13,6 @@ import retrofit2.http.Query;
 public interface GitRepoInterface {
 
     @GET("{owner}/{repo}")
-    Call<JsonElement> getRepo(@Header("Authorization") String auth, @Path(value = "owner") String owner, @Path(value = "repo") String repo);
+    Call<JsonElement> getRepo(@Path(value = "owner") String owner, @Path(value = "repo") String repo);
 
 }
